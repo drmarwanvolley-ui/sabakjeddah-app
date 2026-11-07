@@ -1,22 +1,71 @@
-package com.sabakjedddah.app
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB">
 
-import android.content.Intent
-import android.net.Uri
-import android.os.Bundle
-import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        <!-- العنوان الرئيسي -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="سباك جدة للسباكة والخدمات الصحية"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1E3A8A"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp" />
 
-        // ربط زر زيارة الموقع الإلكتروني بـ sabakjedddah.com
-        val btnWebsite = findViewById<Button>(R.id.btnWebsite)
-        btnWebsite.setOnClickListener {
-            val url = "https://www.sabakjedddah.com/"
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-            startActivity(intent)
-        }
-    }
-}
+        <!-- خبرة وموقع -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="خبرة 15 سنة | فريق يضم أكثر من 10 فنيين\nمقرنا في حي الصفا ونخدم جميع أحياء جدة"
+            android:textSize="14sp"
+            android:textColor="#4B5563"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- نبذة تعريفي -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="نشاط متخصص في كافة أعمال السباكة والخدمات الصحية المتميزة بجدة بأعلى معايير الجودة والسرعة."
+            android:textSize="14sp"
+            android:textColor="#374151"
+            android:gravity="center"
+            android:background="#EFF6FF"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- قائمة الخدمات -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="خدماتنا المتميزة:\n1. سباكة عامة وإصلاح الأعطال اليومية\n2. تأسيس وصيانة السباكة\n3. تركيب الأدوات الصحية\n4. تسليك المجاري والبيارات\n5. كشف تسربات المياه\n6. مكافحة الحشرات\n7. مقاولات الترميم والتكسير"
+            android:textSize="14sp"
+            android:textColor="#1F2937"
+            android:lineSpacingExtra="6dp"
+            android:paddingStart="8dp"
+            android:layout_marginBottom="28dp" />
+
+        <!-- زر زيارة الموقع الإلكتروني -->
+        <Button
+            android:id="@+id/btnWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="زيارة موقعنا الإلكتروني"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#2563EB"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
